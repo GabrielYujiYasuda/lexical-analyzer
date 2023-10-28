@@ -7,10 +7,14 @@ public class Lexer {
     public ArrayList<Token> lex(String input) {
         var tokens = new ArrayList<Token>();
 
+        //Used to define and compile a regex, turning them into strings.
         Pattern pattern = Pattern.compile("(PRINT|ADD|SUB)|\"(.*?)\"|(\\d+)|(\\s+)");
-
+        //Used to match the regex and the input string.
         Matcher matcher = pattern.matcher(input);
 
+        //find is used to find the next correspondent regex in the string.
+        //while group is used do access the next correspondent regex in the string\
+        //after a succeeded find.
         while (matcher.find()) {
             if (matcher.group(1) != null) {
                 tokens.add(new Token("COMMAND", matcher.group(1)));

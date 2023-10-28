@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
+        //Professor Carlos Augusto dos Santos Pinheiro.
+        //Compilers.
         Lexer l = new Lexer();
 
         String input1 = "PRINT \"ASD, World!\"";
