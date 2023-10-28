@@ -1,18 +1,16 @@
 package lexicalAnalyzer;
 
-import java.util.ArrayList;
-
 public class Token {
     private String type;
     private String value;
 
-    //Construtor
+    //Constructor
     public Token(String type, String value) {
         this.type = type;
         this.value = value;
     }
 
-    //Getters, já que os atributos devem ser privados.
+    //Getters, due the private attributes
     public String getType() {
         return type;
     }
